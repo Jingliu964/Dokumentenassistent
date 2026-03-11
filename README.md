@@ -73,3 +73,4 @@ curl -X POST "http://127.0.0.1:8000/query" \
 - To use OpenAI instead of local models, set `MODEL_PROVIDER=openai` and `OPENAI_API_KEY`.
 # rag-prototype
 # rag-prototype
+# rag-prototype
