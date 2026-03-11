@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RAG App</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="brand">RAG Studio</div>
+      <h1>Ask your docs</h1>
+      <p>Local-first RAG with multi-tenant isolation, audit logs, and API key auth.</p>
+      <p>Docs live in <code>data/tenants/&lt;tenant&gt;/docs</code> or via upload.</p>
+    </header>
+
+    <section class="card">
+      <label class="label">Access</label>
+      <div class="row">
+        <input id="apiKey" type="password" placeholder="X-API-Key (required)" />
+        <input id="userId" type="text" placeholder="X-User (optional)" />
+      </div>
+      <p class="hint">API keys map to tenant and role in <code>.env</code>.</p>
+    </section>
+
+    <section class="card">
+      <label class="label">Upload Documents</label>
+      <input id="uploadInput" type="file" multiple accept=".txt,.md,.pdf,.docx,.pptx" />
+      <div class="row">
+        <button id="uploadBtn">Upload Files</button>
+      </div>
+      <p class="hint">Supported: .txt, .md, .pdf, .docx, .pptx</p>
+      <div id="uploadStatus" class="status"></div>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <button id="ingestBtn">Ingest Documents</button>
+        <label class="checkbox">
+          <input type="checkbox" id="rebuildChk" />
+          Rebuild index
+        </label>
+      </div>
+      <div id="ingestStatus" class="status"></div>
+    </section>
+
+    <section class="card">
+      <label class="label">Question</label>
+      <textarea id="question" rows="4" placeholder="What is this project about?"></textarea>
+      <div class="row">
+        <label class="label-inline">Top K</label>
+        <input id="topK" type="number" min="1" max="20" value="5" />
+        <button id="askBtn">Ask</button>
+      </div>
+      <div id="answer" class="answer"></div>
+      <div id="citations" class="citations"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

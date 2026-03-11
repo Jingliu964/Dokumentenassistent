@@ -1,0 +1,148 @@
+:root {
+  --bg: #f5f0e8;
+  --ink: #1e1b16;
+  --accent: #c24b2a;
+  --card: #fff7ef;
+  --muted: #6b6256;
+  --border: #e2d6c9;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 10% 10%, #fff 0%, var(--bg) 45%, #efe4d7 100%);
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.hero {
+  padding: 28px 32px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, #fffdf9 0%, #f3e8da 100%);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+h1 {
+  margin: 8px 0 8px;
+  font-size: 2.4rem;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.card {
+  margin-top: 24px;
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: 0;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+textarea, input[type="number"], input[type="text"], input[type="password"], input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: white;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input[type="number"] {
+  max-width: 120px;
+}
+
+.label-inline {
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.hint {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.checkbox {
+  color: var(--muted);
+  font-size: 0.95rem;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.status.ok { color: #2d6a4f; }
+.status.error { color: #b00020; }
+.status.pending { color: #9a6b1d; }
+
+.answer {
+  margin-top: 16px;
+  padding: 14px;
+  background: white;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  min-height: 48px;
+}
+
+.citations {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  .page { padding: 32px 16px 48px; }
+}

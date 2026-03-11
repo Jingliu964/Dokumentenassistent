@@ -1,0 +1,1 @@
+This is a sample document for the RAG app. Replace this file with your own .txt or .md documents.
